@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | Roz-गार</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header_area bg-dark py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand text-white" href="index.html">
+                    <img width="200" height="200" src="../img/logo.png" alt="Roz-गार Logo">
+                    <span class="logo-text">Roz-गार</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html">Home | घर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../jobs.html">Jobs | नौकरियाँ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Show success or error message -->
+    <?php
+    session_start();
+    if (isset($_SESSION['message'])):
+    ?>
+        <div class="container mt-4">
+            <div class="alert alert-<?php echo $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
+                <?php echo $_SESSION['message']; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+
+    <?php
+        unset($_SESSION['message']); // Clear the message after it is displayed
+        unset($_SESSION['message_type']);
+    endif;
+    ?>
+
+    <!-- Post a Job Section -->
+    <section class="post-job-section bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title">Post a Job | नौकरी पोस्ट करें</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="submit-job.php" method="POST" id="post-job-form" class="bg-white p-4 rounded shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="job-title" class="form-label">Job Title | नौकरी का शीर्षक</label>
+                                    <input type="text" class="form-control" id="job-title" name="job_title" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="job-type" class="form-label">Job Type | नौकरी का प्रकार</label>
+                                    <select class="form-control" id="job-type" name="job_type" required>
+                                        <option value="Full-time">Full-time | पूर्णकालिक</option>
+                                        <option value="Part-time">Part-time | अंशकालिक</option>
+                                        <option value="Freelance">Freelance | फ्रीलांस</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="job-location" class="form-label">Location | स्थान</label>
+                                    <input type="text" class="form-control" id="job-location" name="job_location" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="salary" class="form-label">Salary | वेतन</label>
+                                    <input type="text" class="form-control" id="salary" name="salary" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="job-description" class="form-label">Job Description | नौकरी का विवरण</label>
+                            <textarea class="form-control" id="job-description" name="job_description" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="contact-info" class="form-label">Contact Information | संपर्क जानकारी</label>
+                            <input type="text" class="form-control" id="contact-info" name="contact_info" required>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary mt-4 btn-lg">Post Job | नौकरी पोस्ट करें</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer_area text-center bg-dark py-4 text-white">
+        <div class="container">
+            <p>&copy; 2024 Roz-गार. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

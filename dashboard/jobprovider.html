@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Job Provider Dashboard | Roz-गार</title>
+    <meta name="description" content="Dashboard for Job Providers to manage job seekers on Roz-गार">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/gijgo.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* Ensure the footer sticks to the bottom */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            flex: 1; /* Pushes the footer to the bottom */
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .dashboard-content h2, .dashboard-content p {
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="slider_bg_1">
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img width="150" height="150" src="../img/logo.png" alt="Roz-गार Logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="../index.html">Home (होम)</a></li>
+                                            <!-- Removed the Browse Jobs link -->
+                                            <li><a href="seekers.html">Job Seekers (नौकरी चाहनेवाले)</a></li> <!-- New link to seekers.html -->
+                                            <li><a href="../contact.html">Contact (संपर्क करें)</a></li>
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="Appointment">
+                                    <a class="boxed-btn3" href="../post-job/hire.html">Post a Job (नौकरी डालें)</a><span style="padding: 20px;"></span>
+                                    <a class="boxed-btn3" href="logout.php">Logout (लॉगआउट)</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Main Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Dashboard Content -->
+        <div class="dashboard-content section-padding">
+            <div class="container">
+                <h2>Welcome, Job Provider (नौकरी देनेवाले)</h2>
+                <p>Manage job seekers and their applications here.</p>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <a href="view-applications.html" class="boxed-btn">View Job Seeker Applications (नौकरी चाहने वालों के आवेदन देखें)</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="manage-job-seekers.html" class="boxed-btn">Manage Job Seekers (नौकरी चाहने वालों को प्रबंधित करें)</a>
+                    </div>
+                    <div class="col-lg-6"><br>
+                        <a href="manage-job-seekers.html" class="boxed-btn">View Total Jobs Uploaded</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="slider_bg_1">
+        <div class="footer_area">
+            <div class="container">
+                <div class="footer_widgets">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_widget">
+                                <div class="footer_logo">
+                                    <a href="#">
+                                        <img style="width: 150px; height: 150px" src="../img/logo.png" alt="Roz-गार Logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_widget">
+                                <h4>Contact (संपर्क)</h4>
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i> Jaipur, Rajasthan</li>
+                                    <li><i class="fa fa-phone"></i> +91 123 456 7890</li>
+                                    <li><i class="fa fa-envelope"></i> info@rozzgar.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

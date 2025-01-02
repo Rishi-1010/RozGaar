@@ -1,0 +1,22 @@
+.logo img {
+    width: 100px; /* Reduced width */
+    height: 100px; /* Reduced height */
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    gap: 15px; /* Add spacing between items */
+}
+
+#navigation li {
+    display: inline-block;
+}
+
+.main-header-area {
+    padding: 10px 0; /* Reduce padding for a compact header */
+}
+
+.header-area .row.align-items-center {
+    align-items: center; /* Ensure proper vertical alignment */
+}

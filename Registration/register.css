@@ -1,0 +1,111 @@
+/* Move Registration Form Downwards */
+.register-form-section {
+    padding: 60px 0;
+    margin-top: 100px;  /* Moves the form down by 100px */
+}
+
+/* Ensure Proper Spacing in Registration Form */
+.register-form-box {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.register-form-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Inputs Spacing */
+.register-form-box .form-group {
+    margin-bottom: 20px;
+}
+
+.register-form-box .form-group label {
+    font-weight: bold;
+}
+
+/* Buttons Styling */
+.register-btn, .login-btn, .boxed-btn3 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.register-btn:hover {
+    background-color: #218838;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.boxed-btn3 {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.boxed-btn3:hover {
+    background-color: #e04e3a;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .register-form-box {
+        padding: 20px;
+    }
+
+    .register-btn, .login-btn, .boxed-btn3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .phone_num {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Style for the navigation menu */
+#navigation {
+    background-color: #343a40;  /* Add your preferred color */
+    padding: 10px 0;  /* Adjust padding for better spacing */
+    border-radius: 5px;  /* Optional, for rounded corners */
+}
+
+.main-menu nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu nav ul li {
+    display: inline-block;
+}
+
+.main-menu nav ul li a {
+    color: white;  /* Adjust text color */
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.main-menu nav ul li a:hover {
+    background-color: #495057;  /* Darker background color on hover */
+    border-radius: 5px;
+}
