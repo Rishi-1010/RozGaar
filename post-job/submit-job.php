@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message'] = "Job posted successfully!";
         $_SESSION['message_type'] = "success"; // Success message type
         // Redirect to jobs page after successful post
-        header("Location: ../jobs.html");
-        exit();
+        header("Location: jobs.html");
+        exit();̥̥̥̥
     } else {
         // Set an error message in session
         $_SESSION['message'] = "Error posting job. Please try again.";
