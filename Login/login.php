@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirect based on user type
             if ($user['user_type'] === 'jobSeeker') {
-                header("Location: ../dashboard/jobseeker.html");
+                header("Location: ../dashboard/JobSeeker/jobseeker.html");
             } elseif ($user['user_type'] === 'jobProvider') {
-                header("Location: ../dashboard/jobprovider.html");
+                header("Location: ../dashboard/JobProvider/jobprovider.html");
             } else {
                 // Fallback for undefined user type
                 echo "User type not recognized.";

@@ -35,64 +35,67 @@
         <![endif]-->
 
     <!-- header-start -->
-    <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid ">
-                    <div class="header_bottom_border">
-                        <div class="row align-items-center">
-                            <div class="col-xl-3 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="img/logo.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-7">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index.html">home</a></li>
-                                            <li><a href="jobs.html">Browse Job</a></li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="candidate.html">Candidates </a></li>
-                                                    <li><a href="job_details.html">job details </a></li>
-                                                    <li><a href="elements.html">elements</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="Appointment">
-                                    <div class="phone_num d-none d-xl-block">
-                                        <a href="#">Log in</a>
-                                    </div>
-                                    <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="#">Post a Job</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+<header>
+    <div class="header-area">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center">
+                        <!-- Logo Section -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index.php">
+                                    <img width="200" height="200" src="img/logo.png" alt="Roz-गार Logo">
+                                </a>
                             </div>
                         </div>
+                        <!-- Navigation Section -->
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="main-menu d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.php">Home (होम)</a></li>
+                                        <li><a href="jobs.php">Browse Job (नौकरी देखें)</a></li>
+                                        <li><a href="contact.html">Contact (संपर्क करें)</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Appointment Buttons Section -->
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="Appointment">
+                                <?php if(!isset($_SESSION['user_id'])): ?>
+                                    <div class="phone_num d-none d-xl-block">
+                                        <div class="login-register-buttons">
+                                            <a href="login/login.html" class="login-btn">Login (लॉग इन)</a>
+                                            <a href="Registration/register.html" class="register-btn">Register (पंजीकरण)</a>
+                                        </div>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="phone_num d-none d-xl-block">
+                                        <div class="login-register-buttons">
+                                            <a href="dashboard/JobProvider/jobprovider.html" class="login-btn">Dashboard (डैशबोर्ड)</a>
+                                            <a href="logout.php" class="register-btn">Logout (लॉगआउट)</a>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- Post a Job Button -->
+                                <div class="d-none d-lg-block">
+                                    <a class="boxed-btn3" href="post-job/hire.html">Post a Job (नौकरी डालें)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </header>
-    <!-- header-end -->
+    </div>
+</header>
+<!-- header-end -->
 
     <!-- bradcam_area -->
 <div class="bradcam_area bradcam_bg_1">

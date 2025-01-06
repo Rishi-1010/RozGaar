@@ -414,18 +414,18 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid #1488EF;
+  border: 1px solid #00D363;
   text-align: center;
-  color: #1488EF !important;
+  color: #00D363 !important;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 /* line 15, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #1488EF;
+  background: #00D363;
   color: #fff !important;
-  border: 1px solid #1488EF;
+  border: 1px solid #00D363;
 }
 
 /* line 20, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
@@ -436,33 +436,29 @@ h3 {
 /* line 24, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
 .boxed-btn3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#F91842+0,fd8e5e+100 */
-  background: #1488EF;
+  background: #00D363;
   color: #fff;
   display: inline-block;
-  padding: 13px 29px 13px 29px;
+  padding: 12px 30px; /* Increased padding */
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   border: 0;
-  border: 1px solid transparent;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   text-align: center;
   color: #fff !important;
   text-transform: capitalize;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   cursor: pointer;
+  min-width: 200px; /* Added minimum width */
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: all 0.3s ease;
 }
 
 /* line 43, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
-  color: #1488EF !important;
-  border: 1px solid #1488EF;
-  background: transparent;
+  background: #00b354;
+  color: #fff !important;
+  transform: translateY(-1px);
 }
 
 /* line 48, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
@@ -488,8 +484,8 @@ h3 {
   -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
-  color: #1488EF !important;
-  border: 1px solid #1488EF;
+  color: #00D363 !important;
+  border: 1px solid #00D363;
   background: transparent;
 }
 
@@ -1270,10 +1266,33 @@ h3 {
     padding: 10px 10px;
   }
 }
+.login-register-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap between buttons */
+}
 
-/* line 300, ../../Arafath/CL/December/235. Job board/HTML/scss/_header.scss */
-.header-area .main-header-area.sticky .main-menu {
-  padding: 0;
+.login-btn, .register-btn {
+  padding: 12px 30px; /* Increased horizontal padding */
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #00D363;
+  min-width: 160px; /* Added minimum width */
+  text-align: center; /* Center the text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.login-btn:hover, .register-btn:hover {
+  background-color: #00b354;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.register-btn {
+  background-color: #00D363;
 }
 
 /* line 303, ../../Arafath/CL/December/235. Job board/HTML/scss/_header.scss */
@@ -1557,7 +1576,7 @@ h3 {
 }
 
 /* line 105, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
-.slider_area .ilstration_img {
+.slider_area .single_slider .slider_text .ilstration_img {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1566,21 +1585,21 @@ h3 {
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 105, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
-  .slider_area .ilstration_img {
+  .slider_area .single_slider .slider_text .ilstration_img {
     right: 0;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 113, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
-  .slider_area .ilstration_img img {
+  .slider_area .single_slider .slider_text .ilstration_img img {
     width: 75%;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 113, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
-  .slider_area .ilstration_img img {
+  .slider_area .single_slider .slider_text .ilstration_img img {
     width: 75%;
   }
 }
@@ -1855,6 +1874,49 @@ h3 {
 /* line 79, ../../Arafath/CL/December/235. Job board/HTML/scss/_testmonial.scss */
 .testimonial_area .owl-carousel .owl-nav div.owl-prev {
   margin-top: 30px;
+}
+
+/* Common banner class for page headers */
+.page-banner {
+    background-image: url('../img/banner/bradcam.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    padding: 180px 0 100px;  /* Adjusted padding for banner height */
+}
+
+/* Optional overlay for better text visibility */
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 29, 56, 0.5);  /* Dark blue overlay */
+    z-index: -1;
+}
+
+/* Banner text styling */
+.page-banner h3 {
+    font-size: 56px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .page-banner {
+        padding: 150px 0 60px;
+    }
+    
+    .page-banner h3 {
+        font-size: 30px;
+    }
 }
 
 /* line 2, ../../Arafath/CL/December/235. Job board/HTML/scss/_accordion.scss */
@@ -3115,126 +3177,16 @@ h3 {
   margin-top: 30px;
 }
 
-/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
+/* line 2, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
 .service_area {
   padding-top: 150px;
   padding-bottom: 120px;
 }
-
-@media (max-width: 767px) {
-  /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-  .service_area {
-    padding-top: 50px;
-    padding-bottom: 30px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-  .service_area {
-    padding-top: 100px;
-    padding-bottom: 70px;
-  }
-}
-
-/* line 12, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0a8cff+0,054680+100 */
-  background: #0a8cff;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #0a8cff 0%, #054680 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #0a8cff 0%, #054680 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #0a8cff 0%, #054680 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a8cff', endColorstr='#054680',GradientType=0 );
-  /* IE6-9 */
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 30px;
-}
-
-/* line 21, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .service_icon {
-  margin: 50px auto 43px auto;
-  display: inline-block;
-}
-
-/* line 26, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .info span {
-  font-size: 16px;
-  color: #fff;
-  font-weight: 400;
-  display: block;
-  margin-bottom: 15px;
-}
-
-/* line 33, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .info h3 {
-  color: #33D4D6;
-  font-weight: 400;
-  font-size: 30px;
-}
-
-/* line 39, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .service_content {
-  padding: 30px 50px 50px 50px;
-  margin-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  /* line 39, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-  .service_area .single_service .service_content {
-    padding: 30px 23px 50px 23px;
-  }
-}
-
-/* line 47, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .service_content ul li {
-  font-size: 16px;
-  line-height: 32px;
-  color: #fff;
-  font-weight: 400;
-  position: relative;
-  z-index: 0;
-  padding-left: 18px;
-}
-
-/* line 55, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .service_content ul li::before {
-  width: 8px;
-  height: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #33D4D6;
-}
-
-/* line 68, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .service_content .apply_btn {
-  margin-top: 40px;
-}
-
-/* line 70, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
-.service_area .single_service .service_content .apply_btn button {
-  width: 100%;
-}
-
-/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
 .job_listing_area {
   background: #F5F7FA;
   padding-bottom: 80px;
 }
 
-/* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
 .job_listing_area.plus_padding {
   padding-top: 100px;
 }
@@ -3503,174 +3455,20 @@ h3 {
   outline: none;
 }
 
-/* line 192, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
-.recent_joblist {
-  padding: 15px 20px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
 @media (max-width: 767px) {
-  /* line 192, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
-  .recent_joblist {
-    margin-top: 40px;
+  /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
+  .service_area {
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
-}
-
-/* line 199, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
-.recent_joblist h4 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
-  color: #001D38;
-  margin-bottom: 0;
-}
-
-@media (max-width: 767px) {
-  /* line 199, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
-  .recent_joblist h4 {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  /* line 209, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
-  .recent_joblist .serch_cat {
-    display: block !important;
-  }
-}
-
-/* line 216, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
-.recent_joblist .nice-select {
-  width: 180px;
-  height: 50px;
-  line-height: 50px;
-  color: #7A838B;
-  font-size: 16px;
-}
-
-/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area {
-  background: #F5F7FA;
-  padding-bottom: 100px;
-}
-
-/* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area.candidate_page_padding {
-  padding-top: 100px;
-}
-
-/* line 6, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area.candidate_page_padding .single_candidates {
-  margin-bottom: 30px;
-}
-
-/* line 10, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .single_candidates {
-  background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  padding: 35px 45px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 10, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-  .featured_candidates_area .single_candidates {
-    padding: 25px 30px;
+  /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
+  .service_area {
+    padding-top: 100px;
+    padding-bottom: 70px;
   }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  /* line 10, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-  .featured_candidates_area .single_candidates {
-    padding: 25px 20px;
-  }
-}
-
-/* line 20, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .single_candidates .thumb {
-  width: 110px;
-  height: 110px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: auto;
-}
-
-/* line 25, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .single_candidates .thumb img {
-  width: 100%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-/* line 30, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .single_candidates h4 {
-  font-size: 20px;
-  font-weight: 400;
-  color: #001D38;
-  margin-top: 24px;
-  margin-bottom: 6px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-/* line 38, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .single_candidates p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #AAB1B7;
-  margin-bottom: 0;
-}
-
-/* line 45, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .single_candidates:hover h4 {
-  color: #00D363;
-}
-
-/* line 50, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .owl-carousel .owl-nav div {
-  background: rgba(10, 140, 255, 0.1);
-  height: 38px;
-  left: 0px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  width: 38px;
-  color: #0A8CFF;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  left: 50px;
-  font-size: 15px;
-  line-height: 38px;
-  border: none;
-  left: -19px;
-}
-
-/* line 73, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .owl-carousel .owl-nav div.owl-next {
-  left: auto;
-  right: -19px;
-}
-
-/* line 77, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
-.featured_candidates_area .owl-carousel .owl-nav div:hover {
-  background: rgba(10, 140, 255, 0.5);
-  color: #fff;
-  border: none;
 }
 
 /* line 86, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
@@ -3717,77 +3515,38 @@ h3 {
   color: #00D363;
 }
 
-/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-.top_companies_area {
-  background: #F5F7FA;
-  padding-bottom: 70px;
-}
-
-@media (max-width: 767px) {
-  /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-  .top_companies_area {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 767px) {
-  /* line 7, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-  .top_companies_area .brouse_job {
-    text-align: left !important;
-    margin-top: 15px;
-  }
-}
-
-/* line 16, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-.top_companies_area .single_company {
-  background: #fff;
-  padding: 25px;
+/* line 12, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
+.service_area .single_service {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0a8cff+0,054680+100 */
+  background: #0a8cff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #0a8cff 0%, #054680 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #0a8cff 0%, #054680 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #0a8cff 0%, #054680 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a8cff', endColorstr='#054680',GradientType=0 );
+  /* IE6-9 */
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 30px;
 }
 
-/* line 21, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-.top_companies_area .single_company .thumb {
-  width: 82px;
-  height: 82px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  padding: 15px;
-  background: #F5F7FA;
-  margin-right: 25px;
-  border: 1px solid #F0F0F0;
+/* line 21, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
+.service_area .single_service .service_icon {
+  margin: 50px auto 43px auto;
+  display: inline-block;
 }
 
-/* line 32, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-.top_companies_area .single_company h3 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 18px;
-  margin-top: 20px;
-}
-
-/* line 38, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-.top_companies_area .single_company p {
+/* line 26, ../../Arafath/CL/December/235. Job board/HTML/scss/_service.scss */
+.service_area .single_service .info span {
   font-size: 16px;
-  color: #AAB1B7;
-  margin-bottom: 0;
+  color: #fff;
   font-weight: 400;
-}
-
-/* line 43, ../../Arafath/CL/December/235. Job board/HTML/scss/_compani.scss */
-.top_companies_area .single_company p span {
-  background: #E6F3FF;
-  color: #0A8CFF;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 6px 17px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-right: 10px;
+  display: block;
+  margin-bottom: 15px;
 }
 
 /* line 3, ../../Arafath/CL/December/235. Job board/HTML/scss/_range.scss */
@@ -3986,6 +3745,7 @@ h3 {
   text-align: center;
   display: inline-block;
   background: #EFFDF5;
+  margin-right: 15px;
 }
 
 /* line 83, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_details.scss */
@@ -5886,7 +5646,6 @@ h6 {
 .single-blog .tag {
   text-align: left;
   display: inline-block;
-  float: left;
   font-size: 13px;
   font-weight: 300;
   margin-right: 22px;
@@ -7426,8 +7185,10 @@ h6 {
   transition: 0.8s;
   background: -webkit-linear-gradient(131deg, #feb47b 0%, #ff7e5f 99%);
   -webkit-background-clip: text;
+  background-clip: text;  /* Standard property */
   -webkit-text-fill-color: transparent;
   -webkit-animation: 1s;
+  animation: 1s;  /* Standard property */
 }
 
 /* line 150, ../../Arafath/CL/December/235. Job board/HTML/scss/_blog_part.scss */
@@ -7471,4 +7232,48 @@ h6 {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=style.css.map */
+    .profile-section {
+        padding: 80px 0;
+        background: #F5F7FA;
+        min-height: 80vh; /* This ensures minimum height */
+    }
+    
+    .profile-form-wrap {
+        background: #fff;
+        padding: 40px;  /* Increased padding */
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        margin: 20px 0;  /* Added margin */
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #001D38;
+        margin-bottom: 12px;  /* Increased margin */
+    }
+
+    .form-control {
+        border: 1px solid #ddd;
+        padding: 15px;  /* Increased padding */
+        height: auto;
+        margin-bottom: 20px;  /* Increased margin */
+    }
+
+    .mb-4 {
+        margin-bottom: 2rem !important;  /* Increased spacing between form groups */
+    }
+
+    .text-muted {
+        font-size: 0.875rem;
+        margin-top: 8px;  /* Added margin */
+        display: block;
+    }
+
+    .section-padding {
+        padding: 70px 0;  /* Increased padding */
+    }
+
+    /* Add space between buttons */
+    .text-center .boxed-btn3 {
+        margin: 10px;
+    }

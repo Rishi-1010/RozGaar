@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+<!doctype html>
+<html class="no-js" lang="zxx"></html>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -43,40 +48,45 @@
                         <!-- Logo Section -->
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="index.html">
-                                    <!-- Reduced logo size -->
-                                    <img width="100" height="100" src="img/logo.png" alt="Roz-गार Logo">
+                                <a href="index.php">
+                                    <img width="200" height="200" src="img/logo.png" alt="Roz-गार Logo">
                                 </a>
                             </div>
                         </div>
                         <!-- Navigation Section -->
-                        <div class="col-xl-7 col-lg-7">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Home (होम)</a></li>
-                                        <li><a href="jobs.html">Browse Job (नौकरी देखें)</a></li>
+                                        <li><a href="index.php">Home (होम)</a></li>
+                                        <li><a href="jobs.php">Browse Job (नौकरी देखें)</a></li>
                                         <li><a href="contact.html">Contact (संपर्क करें)</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <!-- Appointment Buttons Section -->
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
                             <div class="Appointment">
-                                <!-- Login Button -->
-                                <div class="phone_num d-none d-xl-block">
-                                    <a href="Login/login.html" class="login-btn">Log in (लॉग इन)</a>
-                                </div>
-                                <!-- Register Button -->
-                                <div class="phone_num d-none d-xl-block">
-                                    <a href="Registration/register.html" class="register-btn">Register (पंजीकरण)</a>
-                                </div>
+                                <?php if(!isset($_SESSION['user_id'])): ?>
+                                    <div class="phone_num d-none d-xl-block">
+                                        <div class="login-register-buttons">
+                                            <a href="login/login.html" class="login-btn">Login (लॉग इन)</a>
+                                            <a href="Registration/register.html" class="register-btn">Register (पंजीकरण)</a>
+                                        </div>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="phone_num d-none d-xl-block">
+                                        <div class="login-register-buttons">
+                                            <a href="dashboard/JobProvider/jobprovider.html" class="login-btn">Dashboard (डैशबोर्ड)</a>
+                                            <a href="logout.php" class="register-btn">Logout (लॉगआउट)</a>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
                                 <!-- Post a Job Button -->
                                 <div class="d-none d-lg-block">
                                     <a class="boxed-btn3" href="post-job/hire.html">Post a Job (नौकरी डालें)</a>
                                 </div>
-                                
                             </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -91,26 +101,25 @@
 </header>
 <!-- header-end -->
 
-
-    <!-- slider_area_start -->
+<!-- slider_area_start -->
 <div class="slider_area">
     <div class="single_slider d-flex align-items-center slider_bg_1">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6">
                     <div class="slider_text">
-                        <h5 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">4536+ Jobs Available (4536+ नौकरियां उपलब्ध)</h5>
-                        <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">नौकरी खोजें (Find a Job)</h3>
-                        <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                            घर बैठे अपनी पसंदीदा नौकरी खोजें, जैसे ट्यूशन, किचन हेल्पर, और बहुत कुछ। 
-                        </p>
+                        <h5 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">4536+ Jobs Available</h5>
+                        <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Find a Job</h3>
+                        <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Your job description here</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="ilstration_img wow fadeInRight d-none d-lg-block" data-wow-duration="1s" data-wow-delay=".2s">
+                        <img src="img/banner/illustration.png" alt="Job Search Illustration">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="ilstration_img wow fadeInRight d-none d-lg-block text-right" data-wow-duration="1s" data-wow-delay=".2s">
-        <img src="img/banner/illustration.png" alt="Job Search Illustration">
     </div>
 </div>
 <!-- slider_area_end -->
@@ -181,50 +190,50 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                     <a href="jobs\tutorjob.html"><h4>Home Tuition (होम ट्यूशन)</h4></a>
                     <p><span>₹3-15K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                     <a href="jobs\data_entry_job.html"><h4>Data Entry (डाटा एंट्री)</h4></a>
                     <p><span>₹8-15K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                     <a href="jobs\home_cook_tiffin_service.html"><h4>Cooking & Tiffin Service (खाना और टिफिन सेवा)</h4></a>
                     <p><span>₹5-20K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                     <a href="jobs\beauty_wellness_consultant.html"><h4>Beauty & Wellness (सौंदर्य और स्वास्थ्य)</h4></a>
                     <p><span>₹8-25K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
                     <a href="jobs\delivery_partner.html"><h4>Delivery Partner (डिलीवरी पार्टनर)</h4></a>
                     <p><span>₹10-20K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="jobs.html"><h4>Office Assistant (ऑफिस असिस्टेंट)</h4></a>
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                    <a href="jobs.php"><h4>Office Assistant (ऑफिस असिस्टेंट)</h4></a>
                     <p><span>₹12-18K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="jobs.html"><h4>Content Writing (कंटेंट राइटिंग)</h4></a>
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s">
+                    <a href="jobs.php"><h4>Content Writing (कंटेंट राइटिंग)</h4></a>
                     <p><span>₹5-15K</span> मासिक</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="jobs.html"><h4>Retail Sales (रिटेल सेल्स)</h4></a>
+                <div class="single_catagory wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <a href="jobs.php"><h4>Retail Sales (रिटेल सेल्स)</h4></a>
                     <p><span>₹10-18K</span> मासिक</p>
                 </div>
             </div>
@@ -245,7 +254,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="brouse_job text-right">
-                    <a href="jobs.html" class="boxed-btn4">Browse More Jobs (अधिक नौकरियाँ देखें)</a>
+                    <a href="jobs.php" class="boxed-btn4">Browse More Jobs (अधिक नौकरियाँ देखें)</a><br><br><br>
                 </div>
             </div>
         </div>
@@ -253,7 +262,7 @@
             <div class="row">
                 <!-- Job 1 -->
                 <div class="col-lg-12 col-md-12">
-                    <div class="single_jobs white-bg d-flex justify-content-between">
+                    <div class="single_jobs white-bg d-flex justify-content-between wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
                                 <img src="img/company/tutor.svg" alt="">
@@ -279,7 +288,7 @@
                 </div>
                 <!-- Job 2 -->
                 <div class="col-lg-12 col-md-12">
-                    <div class="single_jobs white-bg d-flex justify-content-between">
+                    <div class="single_jobs white-bg d-flex justify-content-between wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
                                 <img src="img/company/data_entry.svg" alt="">
@@ -305,7 +314,7 @@
                 </div>
                 <!-- Job 3 -->
                 <div class="col-lg-12 col-md-12">
-                    <div class="single_jobs white-bg d-flex justify-content-between">
+                    <div class="single_jobs white-bg d-flex justify-content-between wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
                                 <img src="img/company/cooking.svg" alt="">
@@ -331,7 +340,7 @@
                 </div>
                 <!-- Job 4 -->
                 <div class="col-lg-12 col-md-12">
-                    <div class="single_jobs white-bg d-flex justify-content-between">
+                    <div class="single_jobs white-bg d-flex justify-content-between wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
                                 <img src="img/company/delivery.svg" alt="">
@@ -357,7 +366,7 @@
                 </div>
                 <!-- Job 5 -->
                 <div class="col-lg-12 col-md-12">
-                    <div class="single_jobs white-bg d-flex justify-content-between">
+                    <div class="single_jobs white-bg d-flex justify-content-between wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
                         <div class="jobs_left d-flex align-items-center">
                             <div class="thumb">
                                 <img src="img/company/beauty.svg" alt="">
@@ -401,7 +410,7 @@
                 <div class="searching_text">
                     <h3>Looking for a Job? (क्या आप नौकरी ढूंढ रहे हैं?)</h3>
                     <p>Browse available part-time and easy jobs like home tuition, data entry, cooking, and more.</p>
-                    <a href="jobs.html" class="boxed-btn3">Browse Jobs (नौकरियाँ देखें)</a>
+                    <a href="jobs.php" class="boxed-btn3">Browse Jobs (नौकरियाँ देखें)</a>
                 </div>
             </div>
             <!-- Looking for an Expert section -->
@@ -562,6 +571,10 @@
 
 
     <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

@@ -6,11 +6,11 @@
 
 /* Ensure Proper Spacing in Registration Form */
 .register-form-box {
-    background-color: #f8f9fa;
+    background: #fff;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 40px 0;
 }
 
 .register-form-box h2 {
@@ -24,7 +24,24 @@
 }
 
 .register-form-box .form-group label {
-    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+select.form-control {
+    height: 45px;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
 }
 
 /* Buttons Styling */
