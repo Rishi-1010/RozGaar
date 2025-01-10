@@ -349,9 +349,9 @@
 
 /* Header Navigation Alignment */
 .header-area .main-header-area .main-menu {
-    text-align: left;  /* Change from center/right to left */
-    margin-left: 0;    /* Remove any left margin */
-    padding-left: 0;   /* Remove any left padding */
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .header-area .main-header-area .main-menu ul {
@@ -362,11 +362,11 @@
 
 .header-area .main-header-area .main-menu ul li {
     display: inline-block;
-    margin-right: 30px;  /* Add space between menu items */
+    margin-right: 30px;
     position: relative;
 }
 
-/* Adjust logo area if needed */
+/* Adjust logo area */
 .header-area .main-header-area .logo {
     padding: 0;
     margin: 0;
@@ -376,12 +376,23 @@
 .header-area .main-header-area .Appointment {
     display: flex;
     align-items: center;
-    justify-content: flex-end;  /* Align buttons to the right */
+    justify-content: flex-end;
     gap: 15px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 991px) {
-    .header-area .main-header-area .main-menu {
-        padding-left: 15px;  /* Add some padding on mobile */
+    .dashboard-actions .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-} 
+    
+    .boxed-btn {
+        padding: 15px 20px;
+        font-size: 15px;
+    }
+
+    .header-area .main-header-area .main-menu {
+        padding-left: 15px;
+    }
+}

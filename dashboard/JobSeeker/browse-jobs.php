@@ -36,6 +36,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="../../css/slicknav.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard-style.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
 </head>
 
@@ -85,7 +86,7 @@ $result = $conn->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="bradcam_text"><br><br><br>
+                <div class="bradcam_text"><br>
                     <h2 class="section-title text-center mb-4">Available Jobs | उपलब्ध नौकरियां</h2>
                     <div class="text-center mb-5">
                         <a href="jobseeker.html" class="boxed-btn3">
